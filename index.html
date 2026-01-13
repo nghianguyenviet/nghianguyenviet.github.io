@@ -1,1 +1,392 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viet-Nghia Nguyen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            background: #ffffff;
+            color: #111;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= NAV BAR ================= */
+        .top-nav {
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a73e8;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .nav-links a:hover {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        /* ================= MAIN LAYOUT ================= */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* ================= SIDEBAR ================= */
+        .sidebar {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin: 10px 0;
+        }
+
+        .role {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .links div {
+            margin-bottom: 10px;
+        }
+
+        /* ================= CONTENT ================= */
+        .content h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            border-bottom: 2px solid #111;
+            padding-bottom: 6px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .content p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            text-align: justify;
+        }
+
+        .list {
+            font-size: 14.5px;
+            line-height: 1.65;
+        }
+
+        .entry {
+            margin-bottom: 14px;
+        }
+
+        .entry strong {
+            font-weight: 600;
+        }
+
+        .location {
+            font-size: 13.5px;
+            color: #555;
+        }
+        
+        .education-item {
+            margin-bottom: 22px;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        
+        .education-school {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+        }
+                
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .links {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAV BAR ================= -->
+<nav class="top-nav">
+    <div class="nav-title">Viet-Nghia Nguyen</div>
+    <div class="nav-links">
+        <a href="#" onclick="showProfile()">Profile</a>
+        <a href="#" onclick="showPublications()">Publications</a>
+    </div>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+
+        <div class="name">Viet-Nghia Nguyen</div>
+
+        <div class="links">
+            <div>📧 <a href="nghianguyenviet98@gmail.com">Email</a></div>
+            <div>🎓 <a href="https://scholar.google.com/citations?user=DV3pTQUAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
+            <div>📘 <a href="https://www.facebook.com/nguyenviet.nghia.315" target="_blank">Facebook</a></div>
+        </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+        
+        <div id="profile-section">
+        <!-- PROFILE -->
+            <div class="section">
+                <h2>Biography</h2>
+                <p>
+                    Viet-Nghia Nguyen is currently pursuing a PhD’s degree in Aerospace Engineering at the <a href="https://sites.google.com/view/caesl/home" target="_blank" rel="noopener noreferrer"> Computational Aeroelasticity and Structure Laboratory, Jeonbuk National University, Korea.
+                    In 2025, Nghia received his Master's degree in Aerospace Information Engineering from KonKuk University, Korea.
+                </p>
+            </div>
+
+           <div class="section">
+                <h2>Research Interests</h2>
+                <p>
+                    Multidiscipline Design Optimization<br>
+                    Artificial Intelligence/Machine Learning Application in Surrogate-based Modeling<br>
+                </p>
+            </div>
+    
+    
+            <div class="section">
+                <h2>Education</h2>
+                 <div class="education-item">
+                    <div class="education-degree">
+                       PhD, Aerospace Engineering
+                    </div>
+                    <p class="education-school">
+                        Jeonbuk National University, Korea (2025/09 - Present)
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-degree">
+                       MS, Aerospace Information Engineering
+                    </div>
+                    <p class="education-school">
+                        KonKuk University, Korea (2022/09 - 2025/02)
+                    </p>
+                </div>
+
+              <div class="education-item">
+                    <div class="education-degree">
+                       BS, Aviation Engineering
+                    </div>
+                    <p class="education-school">
+                        Hanoi University of Science and Technology, Vietnam (2016 - 2021)
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Experiences</h2>
+                  <div class="education-item">
+                    <div class="education-degree">
+                       PhD Researcher at <a https://sites.google.com/view/caesl/home" target="_blank" rel="noopener noreferrer">
+            CAeSL Lab
+        </a>
+                    </div>
+                    <p class="education-school">
+                         Jeonbuk National University, Korea (2025/09 - Present)
+                    </p>
+                </div>
+              
+                  <div class="education-item">
+                    <div class="education-degree">
+                       Researcher at <a https://sites.google.com/view/caesl/home" target="_blank" rel="noopener noreferrer">
+            CAeSL Lab
+        </a>
+                    </div>
+                    <p class="education-school">
+                        Jeonbuk National University, Korea (2025/02 - 2025/09)
+                    </p>
+                </div>
+              
+                 <div class="education-item">
+                    <div class="education-degree">
+                       Research Assistant at <a https://sites.google.com/view/kadalab/home" target="_blank" rel="noopener noreferrer">
+            KADA Lab
+        </a>
+                    </div>
+                    <p class="education-school">
+                        KonKuk University, Seoul City, Korea (2022/09 - 2025/02)
+                    </p>
+                </div>
+            </div>
+        </div>
+            <!-- PUBLICATIONS -->
+
+            
+       <div class="section" id="publications-section" style="display:none;">
+            <h2>Publications</h2>
+            <div id="pub-list"></div>
+      </div>
+</div>
+    
+<script>
+    const publications = [
+      {
+        authors: "Tran, Thi-Thuy-Minh; Vu, Binh-Minh; Shin, Oh-Soon",
+        title: "Optimization of bandwidth allocation and UAV placement in active RIS-assisted UAV communication networks with wireless backhaul",
+        journal: "Drones",
+        year: 2025,
+        url: "https://www.mdpi.com/2504-446X/9/2/111",
+        bibtex: `@article{tran2025optimization,
+          title={Optimization of bandwidth allocation and UAV placement in active RIS-assisted UAV communication networks with wireless backhaul},
+          author={Tran, Thi-Thuy-Minh and Vu, Binh-Minh and Shin, Oh-Soon},
+          journal={Drones},
+          volume={9},
+          number={2},
+          pages={111},
+          year={2025},
+          publisher={MDPI}
+        }`
+      }, 
+        {
+        authors: "Dang, Xuan-Toan; Vu, Binh-Minh; Nguyen, Quynh-Suong; Tran, Thi-Thuy-Minh; Eom, Joon-Soo; Shin, Oh-Soon",
+        title: "A survey on energy-efficient design for federated learning over wireless networks",
+        journal: "Energies",
+        year: 2024,
+        url: "https://www.mdpi.com/1996-1073/17/24/6485",
+        bibtex: `@article{dang2024survey,
+          title={A survey on energy-efficient design for federated learning over wireless networks},
+          author={Dang, Xuan-Toan and Vu, Binh-Minh and Nguyen, Quynh-Suong and Tran, Thi-Thuy-Minh and Eom, Joon-Soo and Shin, Oh-Soon},
+          journal={Energies},
+          volume={17},
+          number={24},
+          pages={6485},
+          year={2024},
+          publisher={MDPI}
+        }`
+      }, 
+        {
+      authors: "Tran, Thi-Thuy-Minh; Shin, Oh-Soon",
+      title: "Hybrid RIS-assisted UAV Networks with Wireless Backhaul",
+      journal: "Proceedings of the Korean Institute of Communications and Information Sciences (KICS)",
+      year: 2024,
+      url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12034616", // nếu chưa có link PDF, để trống
+      bibtex: `@article{tran2024hybrid,
+        title={Hybrid RIS-assisted UAV Networks with Wireless Backhaul},
+        author={Tran, Thi Thuy Minh and Shin, Oh-Soon},
+        journal={한국통신학회 학술대회논문집},
+        pages={235--236},
+        year={2024}
+      }`
+    }
+    ];
+    
+    function renderPublications() {
+      const container = document.getElementById("pub-list");
+      container.innerHTML = "";
+    
+      publications.forEach((pub, index) => {
+        // In đậm tên của bạn
+        const boldAuthors = pub.authors.replace(
+          "Tran, Thi-Thuy-Minh",
+          "<strong>Tran, Thi-Thuy-Minh</strong>"
+        );
+    
+        const div = document.createElement("p");
+        div.innerHTML = `
+          <strong>[${index + 1}]</strong> ${boldAuthors}, 
+          <em>${pub.title}</em>, ${pub.journal}, ${pub.year}.<br>
+          <a href="${pub.url}" target="_blank">[PDF]</a>
+          <a href="#" onclick="showBibtex(${index})">[BibTeX]</a>
+        `;
+        container.appendChild(div);
+      });
+}
+    
+    function showBibtex(index) {
+      alert(publications[index].bibtex);
+    }
+
+    function showProfile() {
+        document.getElementById("profile-section").style.display = "block";
+        document.getElementById("publications-section").style.display = "none";
+    }
+
+    function showPublications() {
+        document.getElementById("profile-section").style.display = "none";
+        document.getElementById("publications-section").style.display = "block";
+        renderPublications();
+    }
+</script>
+
+</body>
+</html>
